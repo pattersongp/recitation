@@ -36,6 +36,6 @@ public class Classroom{
 		for(int i = 0; i < classSize; i++){
 			gpaAverage += listGPA[i].getGPA();
 		}
-		return gpaAverage;
+		return (double) gpaAverage/classSize;
 	}
 }
