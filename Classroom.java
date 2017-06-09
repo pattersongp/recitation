@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class Classroom{
 
-	double[] listGPA;
+	Student[] listGPA;
 	int classSize;
-	Student gpaAverage;
+	double gpaAverage;
 
 	public Classroom(int size){
 		classSize = size;
