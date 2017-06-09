@@ -12,7 +12,7 @@ public class Classroom{
 
 	public Classroom(int size){
 		classSize = size;
-		listGPA = new double[size];
+		listGPA = new Student[size];
 		Scanner sc = new Scanner(System.in);
 		for(int i = 0; i < size; i++){
 			System.out.println("Please enter the name of a student");
