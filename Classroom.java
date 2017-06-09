@@ -28,7 +28,7 @@ public class Classroom{
 				" GPA can be calculated");
 		}
 		else{
-			gpaAverage();
+			getAvgGPA();
 		}
 	}
 
