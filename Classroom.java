@@ -40,7 +40,7 @@ public class Classroom{
 				}
 			}
 
-			Student dudStudent = new Student("uh", 0.0, "Female");
+			Student dudStudent = new Student("uh", 10000.987, "Female");
 			for(Student dud: listGPA){
 				if(dud.compareTo(dudStudent) < 0){
 					dudStudent = dud;

@@ -12,7 +12,7 @@ public class Student implements Comparable<Student>{
 		private ArrayList<Integer> hours_of_sleep;
 
 	public Student(String name, double initGPA, String gender){
-		name = name;
+		this.name = name;
 		gpa = initGPA;
 		this.gender = gender;
 		hours_of_sleep = new ArrayList<Integer>();
