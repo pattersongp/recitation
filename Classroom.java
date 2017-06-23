@@ -19,7 +19,9 @@ public class Classroom{
 			String sName = sc.next();
 			System.out.println("Please enter the student's GPA");
 			double sGPA = sc.nextDouble();
-			listGPA[i] = new Student(sName, sGPA);
+			System.out.println("male or female?");
+			String gender = sc.next().toLowerCase();
+			listGPA[i] = new Student(sName, sGPA, gender);
 		}
 
 		gpaAverage = 0;
@@ -28,8 +30,34 @@ public class Classroom{
 				" GPA can be calculated");
 		}
 		else{
-			getAvgGPA();
+			System.out.println("The average GPA is: " + getAvgGPA());
+			System.out.println("Lets find the student with the highest" +
+				" and lowest GPAs in this class.");
+			Student aceStudent = new Student("Dummy Student",0.0, "Male");
+			for(Student stud: listGPA){
+				if(stud.compareTo(aceStudent) > 0){
+					aceStudent = stud;
+				}
+			}
+
+			Student dudStudent = new Student("uh", 10000.987, "Female");
+			for(Student dud: listGPA){
+				if(dud.compareTo(dudStudent) < 0){
+					dudStudent = dud;
+				}
+			}
+
+			System.out.println("The student with the highest gpa is " + 
+				aceStudent.getName() + " with a gpa of: " +
+				aceStudent.getGPA());
+			System.out.println("The student with the lowest gpa is " +
+				dudStudent.getName() + " with a gpa of: " +
+				dudStudent.getGPA());
 		}
+	}
+
+	public int getClassSize(){
+		return classSize;
 	}
 
 	public double getAvgGPA(){
